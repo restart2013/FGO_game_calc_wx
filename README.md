@@ -16,3 +16,6 @@ weChat Mini Program. a multifunction calculator for smartphone game FGO 微信�
 
 作者：bilibili nicolu哒
 
+
+github中仅上传核心数据库，大量图片和素材及部分数据库内容将不会上传
+
