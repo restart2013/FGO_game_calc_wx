@@ -1,0 +1,150 @@
+<view class="root">
+
+  <image class="border" src="../../images/npclac/border.png"></image>
+
+  <view class="title">
+    <text>NP计算</text>
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>从者</text>
+    </view>
+    <view class="sevhead">
+      <view class="item">
+        <image src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/Servant{{sevhead}}.jpg"></image>
+        <text>{{ sevname }}</text>
+      </view>
+    </view>
+
+    <view class="line" id="search">
+      <text>更改从者</text>
+      <view class="search">
+        <image src="../../images/npclac/search.png"></image>
+        <input bindinput="setsearchinfo" placeholder="搜索(编号、名字或昵称)"></input>
+      </view>
+      <button bindtap="search">搜索</button>
+    </view>
+    <view class="body">
+      <view class="sevsearch" wx:for="{{ serventnum }}" wx:key="_id" bindtap="setsevnum" data-id="{{ item._id }}">
+        <image src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/Servant{{item.head}}.jpg"></image>
+        <text>{{ item.name }}</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>情况</text>
+    </view>
+
+    <view class="line">
+      <view class="item">
+        <text>指令卡</text>
+        <picker range="{{ card }}" value="{{ cardindex }}" bindchange="setcard">
+          <view>{{ card[cardindex] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <text decode="true">卡&nbsp;&nbsp;&nbsp;位</text>
+        <picker range="{{ order }}" value="{{ orderindex }}" bindchange="setorder">
+          <view hidden="{{orderhide}}">{{ order[orderindex] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <text>首蓝染色</text>
+        <picker range="{{ fb }}" value="{{ fbindex }}" bindchange="setfb">
+          <view hidden="{{fbhide}}">{{ fb[fbindex] }}</view>
+        </picker>
+      </view>
+    </view>
+
+
+    <view class="line">
+      <view class="item">
+        <text>过量hits</text>
+        <input value="{{ okhit }}" type="number" bindinput="setokhit"></input>
+      </view>
+      <view class="item">
+        <button class="adj" bindtap="setmax">max</button>
+        <button class="adj" bindtap="setmin">min</button>
+      </view>
+      <view class="item">
+        <text>是否暴击</text>
+        <picker range="{{ cri }}" value="{{ criindex }}" bindchange="setcri">
+          <view>{{ cri[criindex] }}</view>
+        </picker>
+      </view>
+    </view>
+
+  <view class="tips">
+      <text>敌方</text>
+    </view>
+  
+
+    <view class="line">
+      <view class="item">
+        <text>敌方职介</text>
+        <picker range="{{ sclass }}" value="{{ sclassindex }}" bindchange="setsclass">
+          <view>{{ sclass[sclassindex] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <text>敌方类型</text>
+        <picker range="{{ type }}" value="{{ typeindex }}" bindchange="settype">
+          <view>{{ type[typeindex] }}</view>
+        </picker>
+      </view>
+    </view>
+
+      <view class="tips">
+      <text>buff</text>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>蓝魔放</text>
+        <input value="{{ bplus }}" type="number" bindinput="setbplus"></input>
+      </view>
+      <view class="item">
+        <text>绿魔放</text>
+        <input value="{{ gplus }}" type="number" bindinput="setgplus"></input>
+      </view>
+      <view class="item">
+        <text>黄金律</text>
+        <input value="{{ npplus }}" type="number" bindinput="setnpplus"></input>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>计算结果</text>
+    </view>
+
+    <view class="clac">
+      <button bindtap="_clac">计算</button>
+    </view>
+    <view class="line">
+      <view class="item res">
+        <text decode="true">&nbsp;np&nbsp;&nbsp;</text>
+        <text id="fix">{{ res }}</text>
+      </view>
+    </view>
+
+    <view class="clac">
+      <button bindtap="setsmhide">说明</button>
+    </view>
+    <view hidden="{{ smhide }}">
+      <text class="wxts">一.为方便单独计算np的情况，单开本页功能用于计算从者单张指令卡的np</text>
+      <text class="wxts">二.计算结果均为对一个敌人的np获取结果，光炮宝具从者请自行加算</text>
+      <text class="wxts">三.从者职介技能(被动)的蓝绿魔放及黄金律需要手动输入</text>
+    </view>
+  </view>
+
+
+<image class="border" src="../../images/npclac/border2.png"></image>
+
+
+</view>

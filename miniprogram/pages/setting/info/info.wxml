@@ -1,0 +1,51 @@
+<view class="root">
+
+
+  <view class="head">
+    <text>-----使用说明-----</text>
+  </view>
+
+  <view class="title">
+    <text>一、</text>
+  </view>
+
+  <view class="body">
+    <text>当前小程序版本为1.4.1，可能存在一些问题，如有发现，很愿意得到你的反馈。</text>
+  </view>
+
+  <view class="title">
+    <text>二、</text>
+  </view>
+
+  <view class="body">
+    <text>小程序的功能暂时是首页上这几个。关于如何使用就不多做说明了，很简单，自己摸索一下应该就会了。</text>
+    <text>若有疑问请参看“常见问题”页面</text>
+  </view>
+
+  <view class="title">
+    <text>三、</text>
+  </view>
+
+  <view class="body">
+    <text>周回宝具计算的功能正在完善中</text>
+    <text>计算暴击概率的功能正在完善中</text>
+  </view>
+
+  <view class="title">
+    <text>四、</text>
+  </view>
+
+  <view class="body">
+    <text>小程序中所有计算公式和从者信息均参考自atwiki和mooncell网站，在此表示感谢。</text>
+  </view>
+
+  <view class="title">
+    <text>五、</text>
+  </view>
+
+  <view class="body">
+    <text>封面和logo取自画师藤原的作品：あなたがいる世界に私も生きてる</text>
+  </view>
+
+
+</view>

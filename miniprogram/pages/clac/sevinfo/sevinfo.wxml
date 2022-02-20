@@ -1,0 +1,745 @@
+<view class="root">
+
+
+  <view class="navig">
+    <view class="item" bindtap="scrollone">
+      <image src="../../../images/clac/head/sevinfo.png"></image>
+    </view>
+    <view class="item" bindtap="scrolltwo">
+      <image src="../../../images/clac/head/emyinfo.png"></image>
+    </view>
+    <view class="item" bindtap="scrollthree">
+      <image src="../../../images/clac/head/buffset.png"></image>
+    </view>
+    <view class="item" bindtap="scrollfour">
+      <image src="../../../images/clac/head/actionset.png"></image>
+    </view>
+    <view class="item5" bindtap="scrollfive">
+      <image src="../../../images/clac/head/res.png"></image>
+    </view>
+  </view>
+
+  <view id="partone" hidden="{{partone[index]}}">
+    <view class="head" id="one">
+      <image src="../../../images/clac/border.png"></image>
+    </view>
+
+    <!--从者信息-->
+    <view class="sevinfo">
+      <view class="title">
+        <text>从者信息</text>
+      </view>
+      <view class="sevheadimg">
+        <image wx:if="{{ id>0 }}" src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/Servant{{id}}.jpg"></image>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>从者编号</text>
+          <text id="sevname">{{ name }}</text>
+        </view>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>从者ATK</text>
+          <input value="{{ maxatk }}" bindinput="maxatkset" type="number"></input>
+          <picker class="lvpickfather" range="{{ atklv }}" value="{{ atklvindex }}" bindchange="atklvset">
+            <view class="lvpick">{{ atklv[atklvindex] }}</view>
+          </picker>
+        </view>
+        <view class="item">
+          <text>宝具倍率</text>
+          <input value="{{ maxn }}" bindblur="maxnset" bindinput="maxnset2" type="digit"></input>
+          <picker class="lvpickfather" range="{{ nlv }}" value="{{ nlvindex }}" bindchange="nlvset">
+            <view class="lvpick">{{ nlv[nlvindex] }}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>芙芙ATK</text>
+          <input value="{{ ffatk }}" bindinput="ffatkset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>礼装ATK</text>
+          <input value="{{ clothatk }}" bindinput="clothatkset" type="number"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>职介</text>
+          <input value="{{ sclass }}" bindinput="sclassset"></input>
+        </view>
+        <view class="item">
+          <text>职介系数</text>
+          <input value="{{ classxi }}" bindchange="classxiset"></input>
+        </view>
+        <view class="item">
+          <text>阵营</text>
+          <input value="{{ camp }}" bindinput="campset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>基础掉星率</text>
+          <input value="{{ star }}" bindchange="starset"></input>
+        </view>
+        <view class="item">
+          <text>宝具颜色</text>
+          <input value="{{ nc }}" bindinput="ncset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>宝具np率</text>
+          <input value="{{ nnp }}" bindchange="nnpset"></input>
+        </view>
+        <view class="item">
+          <text>宝具hit数</text>
+          <input value="{{ nhit }}" bindinput="nhitset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>宝具伤害分布</text>
+          <input value="{{ nf }}" bindinput="nfset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>红卡np率</text>
+          <input value="{{ bnp }}" bindchange="bnpset"></input>
+        </view>
+        <view class="item">
+          <text>红卡hit数</text>
+          <input value="{{ bhit }}" bindinput="bhitset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>红卡伤害分布</text>
+          <input value="{{ bf }}" bindinput="bfset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>蓝卡np率</text>
+          <input value="{{ anp }}" bindchange="anpset"></input>
+        </view>
+        <view class="item">
+          <text>蓝卡hit数</text>
+          <input value="{{ ahit }}" bindinput="ahitset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>蓝卡伤害分布</text>
+          <input value="{{ af }}" bindinput="afset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>绿卡np率</text>
+          <input value="{{ qnp }}" bindchange="qnpset"></input>
+        </view>
+        <view class="item">
+          <text>绿卡hit数</text>
+          <input value="{{ qhit }}" bindinput="qhitset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>绿卡伤害分布</text>
+          <input value="{{ qf }}" bindinput="qfset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>EX卡np率</text>
+          <input value="{{ exnp }}" bindchange="exnpset"></input>
+        </view>
+        <view class="item">
+          <text>EX卡hit数</text>
+          <input value="{{ exhit }}" bindinput="exhitset"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{sevview}}">
+        <view class="item">
+          <text>EX卡伤害分布</text>
+          <input value="{{ exf }}" bindinput="exfset"></input>
+        </view>
+      </view>
+      <button class="btn" bindtap="hidesevinfo">高级设置</button>
+    </view>
+
+  </view>
+
+  <view id="parttwo" hidden="{{parttwo[index]}}">
+    <view class="head" id="two">
+      <image src="../../../images/clac/border.png"></image>
+    </view>
+
+
+    <!--敌方信息-->
+    <view class="enemyinfo">
+      <view class="title">
+        <text>敌方信息</text>
+      </view>
+      <view class="blk" wx:for="{{ enemy }}">
+        <view class="tips">
+          <text>{{ item.name }}</text>
+        </view>
+        <view class="line">
+          <view class="item">
+            <text>敌方HP</text>
+            <input value="{{ item.enemyhp }}" bindinput="emyhpset" type="number" data-id="{{ item.num }}"></input>
+          </view>
+          <view class="item">
+            <text>敌方类型</text>
+            <picker class="picker" range="{{ item.enemytype }}" value="{{ item.typeindex }}" bindchange="typechange" data-id="{{ item.num }}">
+              <view>{{ item.enemytype[item.typeindex] }}</view>
+            </picker>
+          </view>
+        </view>
+        <view class="line">
+          <view class="item">
+            <text>敌方职介</text>
+            <picker class="picker" range="{{ item.enemyclass }}" value="{{ item.classindex }}" bindchange="classchange" data-id="{{ item.num }}">
+              <view>{{ item.enemyclass[item.classindex] }}</view>
+            </picker>
+          </view>
+          <view class="item">
+            <text>敌方阵营</text>
+            <picker class="picker" range="{{ item.enemycamp }}" value="{{ item.campindex }}" bindchange="campchange" data-id="{{ item.num }}">
+              <view>{{ item.enemycamp[item.campindex] }}</view>
+            </picker>
+          </view>
+        </view>
+        <view class="line">
+          <view class="item">
+            <text>红卡耐性</text>
+            <input value="{{ item.rminus }}" bindblur="emyrset" type="digit" data-id="{{ item.num }}"></input>
+          </view>
+          <view class="item">
+            <text>蓝卡耐性</text>
+            <input value="{{ item.bminus }}" bindblur="emybset" type="digit" data-id="{{ item.num }}"></input>
+          </view>
+          <view class="item">
+            <text>绿卡耐性</text>
+            <input value="{{ item.gminus }}" bindblur="emygset" type="digit" data-id="{{ item.num }}"></input>
+          </view>
+        </view>
+        <view class="line">
+          <view class="item">
+            <text decode="true">&nbsp;防&nbsp;&nbsp;&nbsp;&nbsp;御&nbsp;&nbsp;</text>
+            <input value="{{ item.guardplus }}" bindblur="emyguardset" type="digit" data-id="{{ item.num }}"></input>
+          </view>
+          <view class="item">
+            <text>固定伤害减免</text>
+            <input value="{{ item.dmgdown }}" bindinput="emyddset" type="number" data-id="{{ item.num }}"></input>
+          </view>
+          <view class="item">
+          </view>
+        </view>
+        <view class="line">
+          <view class="item">
+            <text>宝具耐性</text>
+            <input value="{{ item.ndown }}" bindblur="emyndset" type="digit" data-id="{{ item.num }}"></input>
+          </view>
+          <view class="item">
+            <text>暴击耐性</text>
+            <input value="{{ item.cridown }}" bindblur="emycridset" type="digit" data-id="{{ item.num }}"></input>
+          </view>
+          <view class="item">
+            <text>全攻击耐性</text>
+            <input value="{{ item.dmgpdown }}" bindblur="emydpdset" type="digit" data-id="{{ item.num }}"></input>
+          </view>
+        </view>
+        <view class="knife"></view>
+      </view>
+      <view class="line" id="pmenemy">
+        <text>tips:  默认攻击目标敌人一。骷髅兵、龙牙兵、僵尸、鬼魂等大部分死灵属于TypeⅡ</text>
+        <button bindtap="emyplus">增加</button>
+        <button bindtap="emyminus">删减</button>
+      </view>
+    </view>
+
+  </view>
+
+  <view id="partthree" hidden="{{partthree[index]}}">
+    <view class="head" id="three">
+      <image src="../../../images/clac/border.png"></image>
+    </view>
+
+    <!--buff设置-->
+    <view class="buffset">
+      <view class="title">
+        <text>buff设置</text>
+      </view>
+      <view class="tips">
+        <text>-a类-</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>红魔放</text>
+          <input value="{{ rplus }}" bindblur="rplusset" type="digit"></input>
+        </view>
+        <view class="item">
+          <text>蓝魔放</text>
+          <input value="{{ bplus }}" bindblur="bplusset" type="digit"></input>
+        </view>
+        <view class="item">
+          <text>绿魔放</text>
+          <input value="{{ gplus }}" bindblur="gplusset" type="digit"></input>
+        </view>
+      </view>
+      <view class="tips">
+        <text>-b类-</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>攻击力</text>
+          <input value="{{ atkplus }}" bindblur="atkplusset" type="digit"></input>
+        </view>
+        <view class="item">
+          <text decode="true">降&nbsp;&nbsp;&nbsp;防</text>
+          <input value="{{ guarddown }}" bindblur="guarddownset" type="digit"></input>
+        </view>
+        <view class="item"></view>
+      </view>
+      <view class="tips">
+        <text>-c类-</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text decode="true">暴&nbsp;&nbsp;&nbsp;伤</text>
+          <input value="{{ criticalplus }}" bindblur="criticalplusset" type="digit"></input>
+        </view>
+        <view class="item">
+          <text decode="true">宝&nbsp;&nbsp;&nbsp;威</text>
+          <input value="{{ nplus }}" bindblur="nplusset" type="digit"></input>
+        </view>
+        <view class="item">
+          <text decode="true">特&nbsp;&nbsp;&nbsp;攻</text>
+          <input value="{{ spatkplus }}" bindblur="spatkplusset" type="digit"></input>
+        </view>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text decode="true">绿&nbsp;&nbsp;&nbsp;暴</text>
+          <input value="{{ qcritical }}" bindblur="qcriticalset" type="digit"></input>
+        </view>
+        <view class="item"></view>
+        <view class="item"></view>
+      </view>
+      <view class="tips">
+        <text>-d类-</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>宝具特攻</text>
+          <input value="{{ spnplus }}" bindblur="spnplusset" type="digit"></input>
+        </view>
+        <view class="item"></view>
+        <view class="item"></view>
+      </view>
+      <view class="tips">
+        <text>-其他-</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text decode="true">固&nbsp;&nbsp;&nbsp;伤</text>
+          <input value="{{ fixdamage }}" bindinput="fixdamageset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>千里眼</text>
+          <input value="{{ starplus }}" bindblur="starplusset" type="digit"></input>
+        </view>
+        <view class="item">
+          <text>黄金律</text>
+          <input value="{{ npplus }}" bindblur="npplusset" type="digit"></input>
+        </view>
+      </view>
+      <button class="btn" bindtap="zero">清零</button>
+    </view>
+
+  </view>
+
+  <view id="partfour" hidden="{{partfour[index]}}">
+    <view class="head" id="four">
+      <image src="../../../images/clac/border.png"></image>
+    </view>
+
+    <!--行动设置-->
+    <view class="actionset">
+      <view class="title">
+        <text>行动设置</text>
+      </view>
+      <view class="tips">
+        <text>行动一</text>
+      </view>
+      <view class="line">
+        <picker class="pickerfather" range="{{ cardkind }}" value="{{ kindexone }}" bindchange="onekiset">
+          <view class="picker">{{ cardkind[kindexone] }}</view>
+        </picker>
+        <picker class="pickerfather" range="{{ cardcolor }}" value="{{ cindexone }}" bindchange="oneciset">
+          <view class="picker">{{ cardcolor[cindexone] }}</view>
+        </picker>
+        <checkbox checked="{{ ifcriyicalone }}" bindtap="criticaloneset">暴击</checkbox>
+      </view>
+      <view class="line" hidden="{{exbuffview[0]}}">
+        <view class="item">
+          <text>附加buff</text>
+        </view>
+        <view class="item">
+          <text>a类</text>
+          <input value="{{ aone }}" bindinput="aoneset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>b类</text>
+          <input value="{{ bone }}" bindinput="boneset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>c类</text>
+          <input value="{{ cone }}" bindinput="coneset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>固伤</text>
+          <input value="{{ done }}" bindinput="doneset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>atk</text>
+          <input value="{{ atkone }}" bindinput="atkoneset" type="number"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{friendview[0]}}">
+        <view class="item">
+          <text>伤害</text>
+          <input value="{{ actoned }}" bindinput="aodset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>星星</text>
+          <input value="{{ actones }}" bindinput="aosset" type="number"></input>
+        </view>
+        <view class="item">
+        </view>
+      </view>
+      <view class="tips">
+        <text>行动二</text>
+      </view>
+      <view class="line">
+        <picker class="pickerfather" range="{{ cardkind }}" value="{{ kindextwo }}" bindchange="twokiset">
+          <view class="picker">{{ cardkind[kindextwo] }}</view>
+        </picker>
+        <picker class="pickerfather" range="{{ cardcolor }}" value="{{ cindextwo }}" bindchange="twociset">
+          <view class="picker">{{ cardcolor[cindextwo] }}</view>
+        </picker>
+        <checkbox checked="{{ ifcriyicaltwo }}" bindtap="criticaltwoset">暴击</checkbox>
+      </view>
+      <view class="line" hidden="{{exbuffview[1]}}">
+        <view class="item">
+          <text>附加buff</text>
+        </view>
+        <view class="item">
+          <text>a类</text>
+          <input value="{{ atwo }}" bindinput="atwoset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>b类</text>
+          <input value="{{ btwo }}" bindinput="btwoset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>c类</text>
+          <input value="{{ ctwo }}" bindinput="ctwoset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>固伤</text>
+          <input value="{{ dtwo }}" bindinput="dtwoset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>atk</text>
+          <input value="{{ atktwo }}" bindinput="atktwoset" type="number"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{friendview[1]}}">
+        <view class="item">
+          <text>伤害</text>
+          <input value="{{ acttwod }}" bindinput="atdset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>星星</text>
+          <input value="{{ acttwos }}" bindinput="atsset" type="number"></input>
+        </view>
+        <view class="item">
+        </view>
+      </view>
+      <view class="tips">
+        <text>行动三</text>
+      </view>
+      <view class="line">
+        <picker class="pickerfather" range="{{ cardkind }}" value="{{ kindexthree }}" bindchange="threekiset">
+          <view class="picker">{{ cardkind[kindexthree] }}</view>
+        </picker>
+        <picker class="pickerfather" range="{{ cardcolor }}" value="{{ cindexthree }}" bindchange="threeciset">
+          <view class="picker">{{ cardcolor[cindexthree] }}</view>
+        </picker>
+        <checkbox checked="{{ ifcriyicalthree }}" bindtap="criticalthreeset">暴击</checkbox>
+      </view>
+      <view class="line" hidden="{{exbuffview[2]}}">
+        <view class="item">
+          <text>附加buff</text>
+        </view>
+        <view class="item">
+          <text>a类</text>
+          <input value="{{ athree }}" bindinput="athreeset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>b类</text>
+          <input value="{{ bthree }}" bindinput="bthreeset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>c类</text>
+          <input value="{{ cthree }}" bindinput="cthreeset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>固伤</text>
+          <input value="{{ dthree }}" bindinput="dthreeset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>atk</text>
+          <input value="{{ atkthree }}" bindinput="atkthreeset" type="number"></input>
+        </view>
+      </view>
+      <view class="line" hidden="{{friendview[2]}}">
+        <view class="item">
+          <text>伤害</text>
+          <input value="{{ actthreed }}" bindinput="athdset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>星星</text>
+          <input value="{{ actthrees }}" bindinput="athsset" type="number"></input>
+        </view>
+        <view class="item">
+        </view>
+      </view>
+      <view class="tips">
+        <text>行动四</text>
+      </view>
+      <view class="line">
+        <picker class="pickerfather" range="{{ exkind }}" value="{{ kindexfour }}" bindchange="fourkiset">
+          <view class="picker">{{ exkind[kindexfour] }}</view>
+        </picker>
+        <picker class="pickerfather" range="{{ excolor }}" value="{{ cindexfour }}" bindchange="fourciset">
+          <view class="picker">{{ excolor[cindexfour] }}</view>
+        </picker>
+        <view id="kongbai1"></view>
+      </view>
+      <view class="line" hidden="{{exbuffview[3]}}">
+        <view class="item">
+          <text>附加buff</text>
+        </view>
+        <view class="item">
+          <text>a类</text>
+          <input value="{{ afour }}" bindinput="afourset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>b类</text>
+          <input value="{{ bfour }}" bindinput="bfourset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>c类</text>
+          <input value="{{ cfour }}" bindinput="cfourset" type="number"></input>
+        </view>
+        <view class="item">
+          <text>固伤</text>
+          <input value="{{ dfour }}" bindinput="dfourset" type="number"></input>
+        </view>
+        <view id="kongbai2"></view>
+      </view>
+      <view class="line" id="excardbuff">
+        <text>tips:  指令卡的纹章效果以及宝具前置后置效果等可以填写在附加buff栏</text>
+        <button bindtap="hideexbuff">附加buff</button>
+      </view>
+    </view>
+
+  </view>
+
+  <view id="partfive" hidden="{{partfive[index]}}">
+    <view class="head" id="five">
+      <image src="../../../images/clac/border.png"></image>
+    </view>
+
+    <!--计算结果-->
+    <view class="result">
+      <view class="title">
+        <text>计算结果</text>
+      </view>
+      <view class="tips">
+        <text>行动一</text>
+        <text class="add">({{cardkind[kindexone]}}-{{cardcolor[cindexone]}})</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>伤害</text>
+          <text class="res">{{ dmgone }}</text>
+        </view>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text decode="true">&nbsp;np&nbsp;</text>
+          <text class="res" bindtap="npinfo_1">{{ npone }}</text>
+        </view>
+        <view class="item">
+          <text>星星</text>
+          <text class="res" bindtap="starinfo_1">{{ starone }}</text>
+        </view>
+      </view>
+      <view class="tips">
+        <text>行动二</text>
+        <text class="add">({{cardkind[kindextwo]}}-{{cardcolor[cindextwo]}})</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>伤害</text>
+          <text class="res">{{ dmgtwo }}</text>
+        </view>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text decode="true">&nbsp;np&nbsp;</text>
+          <text class="res" bindtap="npinfo_2">{{ nptwo }}</text>
+        </view>
+        <view class="item">
+          <text>星星</text>
+          <text class="res" bindtap="starinfo_2">{{ startwo }}</text>
+        </view>
+      </view>
+      <view class="tips">
+        <text>行动三</text>
+        <text class="add">({{cardkind[kindexthree]}}-{{cardcolor[cindexthree]}})</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>伤害</text>
+          <text class="res">{{ dmgthree }}</text>
+        </view>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text decode="true">&nbsp;np&nbsp;</text>
+          <text class="res" bindtap="npinfo_3">{{ npthree }}</text>
+        </view>
+        <view class="item">
+          <text>星星</text>
+          <text class="res" bindtap="starinfo_3">{{ starthree }}</text>
+        </view>
+      </view>
+      <view class="tips">
+        <text>行动四</text>
+        <text class="add">({{exkind[kindexfour]}}-{{excolor[cindexfour]}})</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>伤害</text>
+          <text class="res">{{ dmgfour }}</text>
+        </view>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text decode="true">&nbsp;np&nbsp;</text>
+          <text class="res" bindtap="npinfo_4">{{ npfour }}</text>
+        </view>
+        <view class="item">
+          <text>星星</text>
+          <text class="res" bindtap="starinfo_4">{{ starfour }}</text>
+        </view>
+      </view>
+      <view class="tips">
+        <text>总和</text>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text>伤害</text>
+          <text class="res">{{ dmgsum }}</text>
+        </view>
+      </view>
+      <view class="line">
+        <view class="item">
+          <text decode="true">&nbsp;np&nbsp;</text>
+          <text class="res">{{ npsum }}</text>
+        </view>
+        <view class="item">
+          <text>星星</text>
+          <text class="res">{{ starsum }}</text>
+        </view>
+      </view>
+      <view class="lineimgbtn">
+        <view class="imgbtn" bindtap="maxclac" style="background-color:{{ imgbtn_bgcolor[0] }}">
+          <text>最大</text>
+        </view>
+        <view class="imgbtn" bindtap="midclac" style="background-color:{{ imgbtn_bgcolor[1] }}">
+          <text>平均</text>
+        </view>
+        <view class="imgbtn" bindtap="minclac" style="background-color:{{ imgbtn_bgcolor[2] }}">
+          <text>最小</text>
+        </view>
+      </view>
+      <button class="btn" bindtap="_clac">计算</button>
+
+      <view class="advanceline"></view>
+
+      <button class="btn" bindtap="hideclacinfo">计算设置</button>
+
+      <view hidden="{{ clacinfoview }}">
+        <view class="tips">
+          <text>目标敌人</text>
+        </view>
+        <radio-group class="rad">
+          <radio class="radson" wx:for="{{ enemy }}" bindtap="emyselect" data-id="{{ item.num }}">{{ item.name }}</radio>
+        </radio-group>
+        <view class="tips">
+          <text>鞭尸bug</text>
+        </view>
+        <view class="line" id="okbug">
+          <checkbox checked="{{ okbug }}" bindtap="okbugset">鞭尸bug</checkbox>
+        </view>
+        <view class="tips">
+          <text>随机数设置</text>
+        </view>
+        <view class="line">
+          <view class="item">
+            <text>行动一</text>
+            <input value="{{ rna }}" bindchange="rnaset"></input>
+          </view>
+          <view class="item">
+            <text>行动二</text>
+            <input value="{{ rnb }}" bindchange="rnbset"></input>
+          </view>
+          <view class="item">
+            <text>行动三</text>
+            <input value="{{ rnc }}" bindchange="rncset"></input>
+          </view>
+          <view class="item">
+            <text>行动四</text>
+            <input value="{{ rnd }}" bindchange="rndset"></input>
+          </view>
+        </view>
+        <view class="tips">
+          <text>计算信息保存</text>
+        </view>
+          <view class="line" id="sl">
+        <text>保存当前从者的计算信息。可在首页设置中清除所有从者的计算信息。注意：计算结果将不会被保存</text>
+        <button bindtap="save">保存</button>
+        <button bindtap="clear">清除</button>
+      </view>
+      </view>
+
+    </view>
+
+  </view>
+
+  <view id="foot">
+    <image src="../../../images/clac/border2.png"></image>
+  </view>
+
+
+</view>

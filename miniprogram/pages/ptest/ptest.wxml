@@ -1,0 +1,159 @@
+<view class="root">
+  <image src="../../images/pt/border.png"></image>
+  <view class="title">
+    <text>击破概率模拟</text>
+  </view>
+
+  <view class="partone">
+    <image src="../../images/pt/border2.png"></image>
+    <view class="tips">
+      <text>输入项</text>
+    </view>
+
+
+    <view class="line" hidden="{{ plus }}">
+      <view class="item">
+        <text>是否三红</text>
+        <picker class="picker" range="{{ bchain }}" value="{{ index }}" bindchange="bchainset">
+          <view>{{ bchain[index] }}</view>
+        </picker>
+      </view>
+      <view class="item"></view>
+      <view class="item"></view>
+    </view>
+
+    <view class="line" hidden="{{!index}}">
+      <view class="item">
+        <text decode="true">从者ATK</text>
+        <input value="{{atk}}" bindinput="atkset" type="number"></input>
+      </view>
+      <view class="item"></view>
+      <view class="item"></view>
+    </view>
+
+    <view class="line">
+      <view class="item main">
+        <text>card-1.均伤</text>
+        <input value="{{onedmg}}" bindinput="onedmgset" type="number"></input>
+      </view>
+      <view class="item secondary">
+        <text hidden="{{ plus }}">固伤</text>
+        <input value="{{fixdmgone}}" bindinput="fixdmgoneset" type="number" hidden="{{ plus }}"></input>
+      </view>
+      <view class="item secondary">
+        <text hidden="{{ plus }}">是否宝具</text>
+        <view hidden="{{ plus }}">
+          <picker class="picker" range="{{ nn }}" value="{{ nindexone }}" bindchange="nnoneset">
+            <view>{{ nn[nindexone] }}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="item main">
+        <text>card-2.均伤</text>
+        <input value="{{twodmg}}" bindinput="twodmgset" type="number"></input>
+      </view>
+      <view class="item secondary">
+        <text hidden="{{ plus }}">固伤</text>
+        <input value="{{fixdmgtwo}}" bindinput="fixdmgtwoset" type="number" hidden="{{ plus }}"></input>
+      </view>
+      <view class="item secondary">
+        <text hidden="{{ plus }}">是否宝具</text>
+        <view hidden="{{ plus }}">
+          <picker class="picker" range="{{ nn }}" value="{{ nindextwo }}" bindchange="nntwoset">
+            <view>{{ nn[nindextwo] }}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="item main">
+        <text>card-3.均伤</text>
+        <input value="{{threedmg}}" bindinput="threedmgset" type="number"></input>
+      </view>
+      <view class="item secondary">
+        <text hidden="{{ plus }}">固伤</text>
+        <input value="{{fixdmgthree}}" bindinput="fixdmgthreeset" type="number" hidden="{{ plus }}"></input>
+      </view>
+      <view class="item secondary">
+        <text hidden="{{ plus }}">是否宝具</text>
+        <view hidden="{{ plus }}">
+          <picker class="picker" range="{{ nn }}" value="{{ nindexthree }}" bindchange="nnthreeset">
+            <view>{{ nn[nindexthree] }}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="item main">
+        <text>card-ex.均伤</text>
+        <input value="{{fourdmg}}" bindinput="fourdmgset" type="number"></input>
+      </view>
+      <view class="item secondary">
+        <text hidden="{{ plus }}">固伤</text>
+        <input value="{{fixdmgfour}}" bindinput="fixdmgfourset" type="number" hidden="{{ plus }}"></input>
+      </view>
+      <view class="item secondary">
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="item">
+        <text>敌方hp</text>
+        <input value="{{emyhp}}" bindinput="emyhpset" type="number"></input>
+      </view>
+      <view class="item">
+        <button class="btninline" bindtap="plusset">高级</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="parttwo">
+    <image src="../../images/pt/border2.png"></image>
+    <view class="tips">
+      <text>输出项</text>
+    </view>
+
+    <view class="line">
+      <view class="item">
+        <text>模拟次数</text>
+        <input value="{{n}}" bindinput="nset" type="number"></input>
+      </view>
+      <button class="btn" bindtap="clac">模拟</button>
+    </view>
+
+    <view class="line">
+      <view class="item">
+        <text>平均随机数</text>
+        <text class="res">{{ num }}</text>
+      </view>
+      <view class="item">
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="item">
+        <text>击破次数</text>
+        <text class="res">{{ res }}</text>
+      </view>
+      <view class="item">
+        <text>击破概率</text>
+        <text class="res">{{ resp }}</text>
+      </view>
+    </view>
+
+    <view class="line" id="note">
+      <view>
+        <text>tips：模拟次数上限为100w次。100w次模拟精度为0.2%以上(95%置信度)</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+</view>

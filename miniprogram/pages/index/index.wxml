@@ -1,0 +1,87 @@
+<view class="root">
+
+
+  <!-- 轮播图 -->
+  <view class="row-window">
+
+    <swiper class="swipers" indicator-dots="true" indicator-color="#395148" indicator-active-color="#c7b3ae" autoplay="true" circular="true">
+      <!-- 图片 -->
+      <swiper-item id="notices-one">
+        <image src="../../images/mp/row-window/first.jpg"></image>
+      </swiper-item>
+      <swiper-item id="notices-two">
+        <image src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/mp-swiper/newsev.png"></image>
+      </swiper-item>
+      <swiper-item id="notices-three">
+        <image src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/mp-swiper/event.png"></image>
+      </swiper-item>
+      <swiper-item id="notices-four">
+        <image src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/mp-swiper/enventj.png"></image>
+      </swiper-item>
+      <swiper-item id="notices-five">
+        <navigator url="../setting/question/question" hover-class="none">
+          <image src="../../images/mp/row-window/ver.jpg"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+
+  </view>
+
+  <!-- 分界线（隐形） -->
+  <view class="boundary">
+    <image src="../../images/mp/border.png"></image>
+  </view>
+
+  <!-- 主体内容（导航） -->
+  <view class="main-container">
+
+    <view id="line-one">
+      <view class="item">
+        <navigator url="../clac/clac" hover-class="none">
+          <image src="../../images/mp/main-container/icon-one.png"></image>
+          <text>伤害计算器</text>
+        </navigator>
+      </view>
+      <view class="item">
+        <navigator url="../npclac/npclac" hover-class="none">
+          <image src="../../images/mp/main-container/icon-six.png"></image>
+          <text>NP计算</text>
+        </navigator>
+      </view>
+      <view class="item" hidden="1">
+        <navigator url="../ncompare/ncompare" hover-class="none">
+          <image src="../../images/mp/main-container/icon-four.png"></image>
+          <text>周回宝具计算</text>
+        </navigator>
+      </view>
+      <view class="item">
+      </view>
+
+    </view>
+
+    <view id="line-two">
+      <view class="item">
+        <navigator url="../ptest/ptest" hover-class="none">
+          <image src="../../images/mp/main-container/icon-two.png"></image>
+          <text>击破概率</text>
+        </navigator>
+      </view>
+      <view class="item">
+        <navigator url="../pcard/pcard" hover-class="none">
+          <image src="../../images/mp/main-container/icon-three.png"></image>
+          <text>发牌概率</text>
+        </navigator>
+      </view>
+      <view class="item">
+        <navigator url="../none/none" hover-class="none">
+          <image src="../../images/mp/main-container/icon-five.png"></image>
+          <text>暴击概率</text>
+        </navigator>
+      </view>
+
+    </view>
+
+  </view>
+
+
+</view>

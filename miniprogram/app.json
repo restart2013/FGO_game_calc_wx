@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/setting/setting",
+    "pages/clac/clac",
+    "pages/clac/sevinfo/sevinfo",
+    "pages/setting/info/info",
+    "pages/setting/console/console",
+    "pages/setting/writer/writer",
+    "pages/setting/clacclear/clacclear",
+    "pages/setting/question/question",
+    "pages/npclac/npclac",
+    "pages/ptest/ptest",
+    "pages/ncompare/ncompare",
+    "pages/pcard/pcard",
+    "pages/none/none"
+  ],
+  "window": {
+    "backgroundColor": "#f0f0f0",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c7b3ae",
+    "navigationBarTitleText": "FGO伤害计算器",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":{
+    "list":[
+      {"text":"首页",
+      "pagePath":"pages/index/index",
+      "iconPath":"images/nav/tabbar4.png",
+      "selectedIconPath":"images/nav/tabbar2.png"
+      },
+      {
+        "text": "设置",
+        "pagePath": "pages/setting/setting",
+        "iconPath": "images/nav/tabbar3.png",
+        "selectedIconPath": "images/nav/tabbar1.png"
+      }
+    ],
+    "color":"#c7b3ae",
+    "selectedColor": "#390108"
+  },
+  "sitemapLocation": "sitemap.json"
+}

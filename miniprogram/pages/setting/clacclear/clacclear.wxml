@@ -1,0 +1,31 @@
+<view class="root">
+
+
+  <view class="head">
+    <text>-----计算信息清除-----</text>
+  </view>
+
+  <view class="title">
+    <text>清除全从者计算信息</text>
+  </view>
+
+  <view class="body">
+    <button bindtap="clacclear" class="btn">清除</button>
+    <text>{{ info }}</text>
+  </view>
+
+
+   <view class="title">
+    <text>已保存信息的从者</text>
+  </view>
+
+
+   <view class="list">
+<view class="item" wx:for="{{ serventnum }}">
+        <image src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/Servant{{item}}.jpg"></image>
+        <text>{{ item }}</text>
+    </view>
+  </view>
+
+
+</view>

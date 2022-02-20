@@ -1,0 +1,77 @@
+page {
+  width: 100%;
+  background-color: #faf0f1;
+}
+
+.root {
+  background-color: #faf0f1;
+}
+
+.head text {
+  margin-top: 40rpx;
+  display: block;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  font-family: YouYuan;
+  color: #b66bc5;
+}
+
+.title text {
+  margin-top: 36rpx;
+  display: block;
+  text-align: center;
+  font-size: 30rpx;
+  color: #874892;
+  font-family: XiHei;
+  font-weight: bold;
+}
+
+.body text {
+  margin-top: 20rpx;
+  margin-left: 110rpx;
+  margin-right: 110rpx;
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #56395c;
+  font-family: XiHei;
+}
+
+.btn{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.list {
+  margin-top: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.item {
+  margin-left: 11rpx;
+  margin-right: 9rpx;
+}
+
+.list .item image {
+  margin-top: 5rpx;
+  height: 144rpx;
+  width: 132rpx;
+  display: block;
+}
+
+.list .item text {
+  display: block;
+  font-size: 19rpx;
+  background-color: #eed4cc;
+  color: #4f4f4f;
+  text-align: center;
+  margin-bottom: 3rpx;
+  width: 132rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

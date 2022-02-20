@@ -1,0 +1,233 @@
+page {
+  width: 100%;
+  background-color: #faf4f2;
+}
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #faf4f2;
+}
+
+.border {
+  width: 100%;
+  height: 56rpx;
+}
+
+.title {
+  padding-bottom: 35rpx;
+}
+
+.title text {
+  display: block;
+  font-family: YouYuan;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+  color: #8e4994;
+}
+
+.part {
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  border-top: 4rpx solid #ca9f9f;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.tips {
+  padding-bottom: 20rpx;
+}
+
+.tips text {
+  display: block;
+  font-family: YouYuan;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.line {
+  height: 50rpx;
+  width: 100%;
+  display: flex;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  padding-left: 15rpx;
+}
+
+.line .item {
+  flex: 1;
+  display: flex;
+}
+
+.line .item text {
+  font-size: 25rpx;
+  font-family: STXihei;
+  padding: 3rpx;
+}
+
+.line .item input {
+  border: 1rpx solid #686868;
+  flex: 1;
+  background-color: #fefefe;
+  border-radius: 10rpx;
+  min-height: 35rpx;
+  height: 38rpx;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+  padding-left: 5rpx;
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  color: #2b2b2b;
+}
+
+.sevhead {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
+  margin-top: 5rpx;
+}
+
+.sevhead image {
+  height: 144rpx;
+  width: 132rpx;
+  display: block;
+}
+
+.sevhead text {
+  display: block;
+  font-size: 22rpx;
+  background-color: #eed4cc;
+  color: #4f4f4f;
+  text-align: center;
+  width: 132rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sevsearch image {
+  height: 108rpx;
+  width: 99rpx;
+  display: block;
+  margin-top: 10rpx;
+}
+
+.sevsearch text {
+  display: block;
+  font-size: 17rpx;
+  background-color: #eed4cc;
+  color: #4f4f4f;
+  text-align: center;
+  width: 99rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+picker {
+  border: 1rpx solid #686868;
+  background-color: #f3f3f3;
+  height: 38rpx;
+  flex: 1;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+  padding-left: 5rpx;
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  color: #2b2b2b;
+}
+
+.search {
+  flex: 17;
+  height: 44rpx;
+  background-color: #fdf4f1;
+  margin-top: 8rpx;
+  margin-bottom: 10rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  border-radius: 18rpx;
+  border: 2rpx solid #a88c85;
+  display: flex;
+}
+
+.search image {
+  height: 36rpx;
+  width: 36rpx;
+  margin: 6rpx;
+  border-right: 1rpx solid #e2cece;
+  padding-right: 10rpx;
+}
+
+.search input {
+  flex: 1;
+  font-size: 26rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 3rpx;
+  color: #705b79;
+}
+
+#search button {
+  flex: 3;
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45rpx;
+  margin-left: 13rpx;
+  margin-top: 10rpx;
+  margin-right: 40rpx;
+}
+
+#search text {
+  font-size: 25rpx;
+  font-family: STXihei;
+  display: flex;
+  padding-top: 14rpx;
+  padding-right: 3rpx;
+}
+
+#fix {
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  margin-right: 60rpx;
+  border: 1rpx solid #fff;
+  background-color: #fff8f8;
+  height: 35rpx;
+  flex: 1;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.item.main {
+  flex: 6;
+}
+
+.item.secondary {
+  flex: 4;
+}
+
+.clac {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15rpx;
+}
+
+.clac button {
+  width: 130rpx;
+  height: 45rpx;
+  margin-right: 30rpx;
+  font-size: 27rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,23 @@
+<view class="root">
+
+  <view class="head">
+    <text>从者列表</text>
+  </view>
+  <!--查找从者-->
+  <view class="search">
+    <image src="../../images/clac/search.png"></image>
+    <input bindinput="search" placeholder="搜索(编号、名字或昵称)" placeholder-class="placeholder"></input>
+  </view>
+
+  <view class="body">
+    <view class="item" wx:for="{{ serventnum }}" wx:key="_id">
+      <navigator url="../clac/sevinfo/sevinfo?id={{ item._id }}&name={{ item.name }}&maxatk={{ item.maxatk }}&maxn={{ item.maxn }}&sclass={{ item.sclass }}&camp={{ item.camp }}&star={{ item.star }}&nnp={{ item.nnp }}&nhit={{ item.nhit }}&nf={{ item.nf }}&bnp={{ item.bnp }}&bhit={{ item.bhit }}&bf={{ item.bf }}&anp={{ item.anp }}&ahit={{ item.ahit }}&af={{ item.af }}&qnp={{ item.qnp }}&qhit={{ item.qhit }}&qf={{ item.qf }}&exnp={{ item.exnp }}&exhit={{ item.exhit }}&exf={{ item.exf }}&nc={{ item.nc }}&atklv90={{ item.atklv90 }}&atklv100={{ item.atklv100 }}&atklv1={{ item.atklv1 }}&nlv1={{ item.nlv1 }}&nlv2={{ item.nlv2 }}&nlv3={{ item.nlv3 }}&nlv4={{ item.nlv4 }}&inib={{ item.inib }}&inia={{ item.inia }}&iniq={{ item.iniq }}&inid={{ item.inid }}&inin={{ item.inin }}&inicri={{ item.inicri }}&inibcri={{ item.inibcri }}&iniacri={{ item.iniacri }}&iniqcri={{ item.iniqcri }}&inisa={{ item.inisa }}&ininp={{ item.ininp }}&tip={{ item.tip }}&tipinfo={{ item.tipinfo }}"
+        hover-class="none">
+        <image class="sevhead" src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/Servant{{item._id}}.jpg"></image>
+        <text class="sevname">{{ item.name }}</text>
+      </navigator>
+    </view>
+  </view>
+
+
+</view>

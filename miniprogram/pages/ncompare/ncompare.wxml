@@ -1,0 +1,185 @@
+<view class="root">
+
+  <image class="border" src="../../images/ncompare/border.png"></image>
+
+  <view class="title">
+    <text>周回宝具计算</text>
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>敌方信息</text>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>选择敌人</text>
+        <picker mode="multiSelector" range="{{emy}}" range-key="name" value="{{index}}" bindcolumnchange="setname" bindchange="setinfo">
+          <view>{{emy[0][index[0]].name}}-{{emy[1][index[1]].name}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>敌方职介</text>
+        <picker range="{{ sclass }}" value="{{ sclassindex }}" bindchange="setsclass">
+          <view>{{ sclass[sclassindex] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <text>敌方阵营</text>
+        <text id="fix">{{ camp }}</text>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>敌人特性</text>
+        <text id="fix">{{ character }}</text>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>敌人hp</text>
+        <input value="{{ hp }}" type="number" bindinput="sethp"></input>
+      </view>
+      <view class="item">
+      </view>
+    </view>
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>从者</text>
+    </view>
+    <view class="sevhead">
+      <view class="item">
+        <image src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/Servant{{sevhead}}.jpg"></image>
+        <text>{{ sevname }}</text>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>ATK</text>
+        <input value="{{ maxatk }}" type="number" bindinput="setmaxatk"></input>
+      </view>
+      <view class="item">
+        <text>宝具等级</text>
+        <picker range="{{ nlv }}" value="{{ nlvindex }}" bindchange="setnlv">
+          <view>{{nlv[nlvindex]}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="line" id="search">
+      <text>更改从者</text>
+      <view class="search">
+        <image src="../../images/ncompare/search.png"></image>
+        <input bindinput="setsearchinfo" placeholder="搜索(编号、名字或昵称)"></input>
+      </view>
+      <button bindtap="search">搜索</button>
+    </view>
+    <view class="body">
+      <view class="sevsearch" wx:for="{{ serventnum }}" wx:key="_id" bindtap="setsevnum" data-id="{{ item._id }}">
+        <image src="cloud://fgodata-pd23a.6667-fgodata-pd23a-1301126494/Servant{{item.head}}.jpg"></image>
+        <text>{{ item.name }}</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>buff</text>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>芙芙ATK</text>
+        <input value="{{ ffatk }}" type="number" bindinput="setffatk"></input>
+      </view>
+      <view class="item">
+        <text>礼装ATK</text>
+        <input value="{{ clothatk }}" type="number" bindinput="setclothatk"></input>
+      </view>
+      <view class="item">
+        <text>黄金律</text>
+        <input value="{{ npplus }}" type="number" bindinput="setnpplus"></input>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>红魔放</text>
+        <input value="{{ rplus }}" type="number" bindinput="setrplus"></input>
+      </view>
+      <view class="item">
+        <text>蓝魔放</text>
+        <input value="{{ bplus }}" type="number" bindinput="setbplus"></input>
+      </view>
+      <view class="item">
+        <text>绿魔放</text>
+        <input value="{{ gplus }}" type="number" bindinput="setgplus"></input>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>领导力</text>
+        <input value="{{ atkplus }}" type="number" bindinput="setatkplus"></input>
+      </view>
+      <view class="item">
+        <text decode="true">降&nbsp;&nbsp;&nbsp;防</text>
+        <input value="{{ guarddown }}" type="number" bindinput="setguarddown"></input>
+      </view>
+      <view class="item">
+        <text decode="true">宝&nbsp;&nbsp;&nbsp;威</text>
+        <input value="{{ nplus }}" type="number" bindinput="setnplus"></input>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text decode="true">固&nbsp;&nbsp;&nbsp;伤</text>
+        <input value="{{ fixdamage }}" type="number" bindinput="setfixdamage"></input>
+      </view>
+      <view class="item">
+        <text decode="true">特&nbsp;&nbsp;&nbsp;攻</text>
+        <input value="{{ spatkplus }}" type="number" bindinput="setspatkplus"></input>
+      </view>
+      <view class="item">
+        <text decode="true">宝具特攻</text>
+        <input value="{{ spnplus }}" type="number" bindinput="setspnplus"></input>
+      </view>
+    </view>
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>计算结果</text>
+    </view>
+
+    <view class="clac">
+      <button bindtap="_clac">计算</button>
+    </view>
+
+    <view class="line">
+      <view class="item main">
+        <text>伤害</text>
+        <text id="fix">{{ dmgrange }}</text>
+      </view>
+      <view class="item secondary">
+        <text>平均</text>
+        <text id="fix">{{ dmg }}</text>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item main">
+        <text decode="true">&nbsp;np&nbsp;&nbsp;</text>
+        <text id="fix">{{ nprange }}</text>
+      </view>
+      <view class="item secondary">
+        <text>平均</text>
+        <text id="fix">{{ np }}</text>
+      </view>
+    </view>
+
+  </view>
+
+  <image class="border" src="../../images/ncompare/border2.png"></image>
+
+
+</view>

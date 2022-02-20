@@ -1,0 +1,110 @@
+<view class="root">
+  <image src="../../images/cp/border.png"></image>
+  <view class="title">
+    <text>暴击概率</text>
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>从者一(主手)</text>
+    </view>
+    <view class="line">
+      <view class="item main">
+        <text>暴击星分配权重</text>
+        <input value="{{ star_o }}" bindinput="soset" type="number"></input>
+      </view>
+      <view class="item secondary">
+        <text>集星度(%)</text>
+        <input value="{{ starup_o }}" bindinput="sposet" type="number"></input>
+      </view>
+    </view>
+
+    <view class="tips">
+      <text>从者二</text>
+    </view>
+    <view class="line">
+      <view class="item main">
+        <text>暴击星分配权重</text>
+        <input value="{{ star_t }}" bindinput="stset" type="number"></input>
+      </view>
+      <view class="item secondary">
+        <text>集星度(%)</text>
+        <input value="{{ starup_t }}" bindinput="sptset" type="number"></input>
+      </view>
+    </view>
+
+    <view class="tips">
+      <text>从者三</text>
+    </view>
+    <view class="line">
+      <view class="item main">
+        <text>暴击星分配权重</text>
+        <input value="{{ star_th }}" bindinput="sthset" type="number"></input>
+      </view>
+      <view class="item secondary">
+        <text>集星度(%)</text>
+        <input value="{{ starup_th }}" bindinput="spthset" type="number"></input>
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class="part">
+    <view class="tips">
+      <text>情况</text>
+    </view>
+    <view class="line">
+
+      <view class="item">
+        <text>主手发牌数</text>
+        <picker class="pickerfather" range="{{ card }}" value="{{ index }}" bindchange="indexchange">
+          <view class="picker">{{ card[index] }}</view>
+        </picker>
+      </view>
+
+      <view class="item">
+        <text>暴击星数量</text>
+        <input value="{{ starnum }}" bindinput="snset" type="number"></input>
+      </view>
+    </view>
+  </view>
+
+  <view class="part">
+    <view class="tips">
+      <text>暴击率</text>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>单卡暴击概率</text>
+        <text class="res">{{ p }}</text>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>至少一张卡暴击概率</text>
+        <text class="res">{{ prandom }}</text>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item">
+        <text>全部卡(≤3)暴击概率</text>
+        <text class="res">{{ psum }}</text>
+      </view>
+    </view>
+
+    <button class="btn" bindtap="clac">暴击概率</button>
+
+  </view>
+
+  <view class="part">
+    <button class="btns" bindtap="smhideset">说明</button>
+    <view hidden="{{ smhide }}">
+      <text class="wxts">一.因以下原因1.公式过于复杂，2.计算器精度不够，故本页概率计算中大量采用估算方法，概率真实值和计算值会存在少许偏差(尤其在40颗暴击星以上时),但不影响使用。如有错漏请联系作者。</text>
+      <text class="wxts">二.任意两张卡暴击概率、任意三张卡暴击概率等复杂情况，通过本页提供的单卡暴击概率，用伯努利概型即可计算。</text>
+      <text class="wxts">三、场上人数为两人的情况暂不提供计算。</text> 
+    </view>
+  </view>
+
+
+</view>

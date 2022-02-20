@@ -1,0 +1,31 @@
+page {
+  width: 100%;
+  background-color: #faf0f1;
+}
+
+.root {
+  background-color: #faf0f1;
+}
+
+.part.one {
+  display: flex;
+  border-bottom: 3rpx solid #e0ccce;
+  border-top: 3rpx solid #e0ccce;
+  margin-top: 40rpx;
+  background-color: #fdf4f4;
+}
+
+.part.two {
+  display: flex;
+  border-bottom: 3rpx solid #e0ccce;
+  background-color: #fdf4f4;
+}
+
+.part text {
+  display: block;
+  margin-left: 22rpx;
+  margin-top: 22rpx;
+  margin-bottom: 22rpx;
+  font-size: 35rpx;
+  color: #574c4d;
+}

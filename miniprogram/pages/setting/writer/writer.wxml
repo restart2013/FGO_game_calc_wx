@@ -1,0 +1,36 @@
+<view class="root">
+
+
+  <view class="head">
+    <text>-----关于作者-----</text>
+  </view>
+
+  <view class="title">
+    <text>作者</text>
+  </view>
+  <view class="img">
+    <image src="../../../images/writer/writer.jpg"></image>
+  </view>
+
+  <view class="body">
+    <text decode="true">b站id：nicolu哒&nbsp;&nbsp;&nbsp;b站uid：8409093</text>
+  </view>
+
+  <view class="body">
+    <text>对小程序有什么意见或建议可以b站私信~</text>
+  </view>
+
+  <view class="title">
+    <text>一些想说的话</text>
+  </view>
+
+  <view class="body">
+    <text>这个小程序是作者在做fgo相关视频时，苦恼于手机上没有方便的计算器而制作的。参考了mooncell和atwiki等网站的相关资料，在用过mooncell网页计算器，nga版头计算器，以及安卓APPfgoclac，微信小程序素材规划等计算器后制作的，在此表示感谢。</text>
+    <text>同时感谢制作过程中b站up：AnneHappy，老婆大人两仪织，Cater-小白之星，asfake，Asuka家驹等人提出的宝贵建议。感谢发布前期FGO咖啡馆所有成员的测试使用。</text>
+    <text>计算器本意是作者方便自己能在手机上使用而制作的，后来将计算器分享给大家，希望能帮助到各位同好，给同好们提供方便；同时也能让大家帮忙检查计算器存在的bug和计算错误。一开始没有想到会有这么多人用，在这里真的非常感谢支持计算器的各位和帮忙宣传计算器的各位。也特别感谢反馈bug的同好们。</text>
+    <text>计算器在作者本人弃坑fgo之前会一直保持更新，也会听取大家的意见进行修改。如果有任何问题可以b站私信，有时可能无法及时看到并回复，见谅。</text>
+    <text>———2020年4月11日</text>
+  </view>
+
+
+</view>

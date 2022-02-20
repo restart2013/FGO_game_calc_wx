@@ -1,0 +1,432 @@
+page {
+  width: 100%;
+  background-color: #faf4f2;
+}
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #faf4f2;
+}
+
+.navig {
+  height: 70rpx;
+  width: 100%;
+  display: flex;
+}
+
+.head {
+  height: 66rpx;
+  width: 100%;
+  background-color: #faf4f2;
+  display: flex;
+  border-top: 4rpx solid #ca9f9f;
+}
+
+#foot {
+  height: 66rpx;
+  width: 100%;
+  background-color: #faf4f2;
+  display: flex;
+  border-bottom: 4rpx solid #ca9f9f;
+  margin-top: 0rpx;
+  padding-bottom: 12rpx;
+}
+
+.head image {
+  margin-top: 12rpx;
+  flex: 1;
+  height: 65rpx;
+}
+
+#foot image {
+  margin-bottom: 12rpx;
+  flex: 1;
+  height: 65rpx;
+}
+
+.navig .item {
+  flex: 1;
+  background-color: #fff4f1;
+  border-left: 4rpx solid #ca9f9f;
+  border-top: 4rpx solid #ca9f9f;
+}
+
+.navig .item5 {
+  flex: 1;
+  background-color: #fff4f1;
+  border-left: 4rpx solid #ca9f9f;
+  border-right: 4rpx solid #ca9f9f;
+  border-top: 4rpx solid #ca9f9f;
+}
+
+.navig image {
+  width: 100%;
+  height: 66rpx;
+}
+
+.title {
+  padding-bottom: 20rpx;
+}
+
+.title text {
+  display: block;
+  font-family: YouYuan;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tips {
+  margin-left: 10rpx;
+  margin-bottom: 12rpx;
+}
+
+.tips text {
+  font-size: 30rpx;
+  font-family: XiHei;
+}
+
+.sevinfo {
+  width: 100%;
+  background-color: #faf4f2;
+}
+
+.sevheadimg {
+  display: flex;
+  justify-content: center;
+}
+
+.sevinfo .sevheadimg image {
+  border: 1rpx solid #fff;
+  height: 144rpx;
+  width: 132rpx;
+}
+
+#sevname {
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  margin-right: 60rpx;
+  border: 1rpx solid #fff;
+  background-color: #fff8f8;
+  height: 35rpx;
+  flex: 1;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.line {
+  height: 50rpx;
+  width: 100%;
+  display: flex;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  padding-left: 15rpx;
+}
+
+.line .item {
+  flex: 1;
+  display: flex;
+}
+
+.line .item text {
+  font-size: 25rpx;
+  font-family: STXihei;
+  padding: 3rpx;
+}
+
+.line .item input {
+  border: 1rpx solid #686868;
+  flex: 1;
+  background-color: #fefefe;
+  border-radius: 10rpx;
+  min-height: 35rpx;
+  height: 38rpx;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+  padding-left: 5rpx;
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  color: #2b2b2b;
+}
+
+.enemyinfo {
+  width: 100%;
+  background-color: #faf4f2;
+}
+
+#pmenemy {
+  margin-top: 20rpx;
+  height: 60rpx;
+  display: flex;
+}
+
+#pmenemy text {
+  flex: 5;
+  font-size: 18rpx;
+  display: flex;
+  margin-top: 5rpx;
+  margin-left: 25rpx;
+}
+
+#pmenemy button {
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45rpx;
+  flex: 1;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.knife {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-top: 2rpx solid #ca9f9f;
+  border-bottom: 2rpx solid #ca9f9f;
+}
+
+.picker {
+  border: 1rpx solid #686868;
+  background-color: #f3f3f3;
+  height: 38rpx;
+  flex: 1;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+  padding-left: 5rpx;
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  color: #2b2b2b;
+  text-align: center;
+}
+
+.lvpick {
+  border: 1rpx solid #686868;
+  background-color: #f3f3f3;
+  height: 38rpx;
+  flex: 1;
+  margin-left: 0rpx;
+  margin-right: 30rpx;
+  padding-left: 0rpx;
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  color: #2b2b2b;
+  text-align: center;
+}
+
+.lvpickfather {
+  flex: 0.8;
+}
+
+.pickerfather {
+  flex: 1;
+}
+
+.buffset {
+  width: 100%;
+  background-color: #faf4f2;
+}
+
+.actionset {
+  width: 100%;
+  background-color: #faf4f2;
+}
+
+.actionset .line .item input {
+  border: 1rpx solid #686868;
+  flex: 1;
+  background-color: #fefefe;
+  border-radius: 10rpx;
+  min-height: 32rpx;
+  height: 32rpx;
+  margin-left: 10rpx;
+  margin-right: 15rpx;
+  padding-left: 5rpx;
+  font-size: 22rpx;
+  font-family: Microsoft YaHei;
+  color: #2b2b2b;
+}
+
+.line checkbox {
+  font-size: 26rpx;
+  font-family: STXihei;
+  margin-right: 20rpx;
+}
+
+.line checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
+  border-color: #c7b3ae;
+  color: #c7b3ae;
+}
+
+#okbug {
+  justify-content: flex-start;
+}
+
+#okbug checkbox {
+  margin-left: 10rpx;
+}
+
+#kongbai1 {
+  width: 114rpx;
+}
+
+#kongbai2 {
+  flex: 1;
+}
+
+#excardbuff {
+  margin-top: 20rpx;
+  height: 60rpx;
+  display: flex;
+}
+
+#excardbuff text {
+  flex: 5;
+  font-size: 18rpx;
+  display: flex;
+  margin-top: 15rpx;
+  margin-left: 40rpx;
+}
+
+#excardbuff button {
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45rpx;
+  flex: 1;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.result {
+  width: 100%;
+  background-color: #faf4f2;
+}
+
+.res {
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  margin-right: 60rpx;
+  border: 1rpx solid #fff;
+  background-color: #fff8f8;
+  height: 35rpx;
+  flex: 1;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.lineimgbtn {
+  height: 50rpx;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+}
+
+.imgbtn {
+  width: 100rpx;
+  height: 35rpx;
+  font-size: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 15rpx;
+  border: 5rpx solid #fff;
+  text-align: center;
+}
+
+.btn {
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45rpx;
+  width: 180rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+.advanceline {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-top: 1rpx solid #ca9f9f;
+}
+
+.tips .add {
+  font-size: 20rpx;
+}
+
+radio .wx-radio-input {
+  width: 30rpx;
+  height: 30rpx;
+  border: 2rpx solid #999;
+  border-radius: 100%;
+  background: none;
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+  border-color: #ca9f9f;
+  background-color: #faf4f2;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  content: '';
+  border-radius: 50%;
+  background-color: #ca9f9f;
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.rad {
+  font-size: 25rpx;
+  margin-bottom: 15rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+}
+
+.radson {
+  margin-right: 25rpx;
+}
+
+#clacinfo{
+  margin-left: 20rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+}
+
+#clacinfo text {
+  font-size: 18rpx;
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+  display: block;
+}
+
+
+#sl {
+  margin-top: 10rpx;
+  display: flex;
+}
+
+#sl text {
+  flex: 5;
+  font-size: 18rpx;
+  display: flex;
+  margin-top: 0rpx;
+  margin-left: 25rpx;
+}
+
+#sl button {
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45rpx;
+  flex: 1;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}

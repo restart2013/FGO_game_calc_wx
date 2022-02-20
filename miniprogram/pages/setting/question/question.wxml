@@ -1,0 +1,124 @@
+<view class="root">
+
+
+  <view class="head">
+    <text>-----常见问题-----</text>
+  </view>
+
+  <view class="title">
+    <text>一、</text>
+  </view>
+
+  <view class="body">
+    <text>（重要）计算器ver1.4.0更新后无需再手动输入从者被动技能(职介技能)，如阵地作成，狂化等</text>
+    <text>宝具特攻、宝具前后置buff需自行判断并手动输入</text>
+    <text>100-120级数据均未录入数据库，100-120级附加技能需自行判断并手动输入</text>
+  </view>
+
+  <view class="title">
+    <text>二、</text>
+  </view>
+
+  <view class="body">
+    <text>计算器会根据输入的敌人血量自行判断np和暴击星获取</text>
+  </view>
+
+  <view class="title">
+    <text>三、</text>
+  </view>
+
+  <view class="body">
+    <text>从者默认atk为从者不喂圣杯情况下的满级atk</text>
+  </view>
+
+  <view class="title">
+    <text>四、</text>
+  </view>
+
+  <view class="body">
+    <text>蓝卡chain的20np和绿卡chain的10暴击星需自行加算</text>
+  </view>
+
+  <view class="title">
+    <text>五、</text>
+  </view>
+
+  <view class="body">
+    <text>宝具特攻以及宝具前/后置buff需自行判断并输入</text>
+  </view>
+
+  <view class="title">
+    <text>六、</text>
+  </view>
+
+  <view class="body">
+    <text>群体宝具只计算对单个敌人的伤害np暴击星，多个敌人需自行加算</text>
+  </view>
+
+  <view class="title">
+    <text>七、</text>
+  </view>
+
+  <view class="body">
+    <text>各类buff未设置上限，方便特殊计算需求</text>
+  </view>
+
+  <view class="title">
+    <text>八、</text>
+  </view>
+
+  <view class="body">
+    <text>因释放宝具会清空宝具前鞭尸bug的累积伤害，而插入其他人的指令卡不会，故将队友行动分为宝具与指令卡，选择时需区分</text>
+  </view>
+
+  <view class="title">
+    <text>九、</text>
+  </view>
+
+  <view class="body">
+    <text>敌方蓝卡耐性绿卡耐性会影响np和暴击星回收，对不影响np暴击星回收的蓝耐绿耐暂时无法计算</text>
+  </view>
+
+  <view class="title">
+    <text>十、</text>
+  </view>
+
+  <view class="body">
+    <text>因微信官方的原因，目前输入框可以输入小数点但不能输入负数</text>
+  </view>
+
+  <view class="title">
+    <text>十一、</text>
+  </view>
+
+  <view class="body">
+    <text>宇宙凛宝具的ex卡威力提升属于a类buff</text>
+  </view>
+
+  <view class="title">
+    <text>十二、</text>
+  </view>
+
+  <view class="body">
+    <text>宇宙凛和红A存在多种色卡宝具，宝具倍率及卡色需自行填写和选取</text>
+  </view>
+
+  <view class="title">
+    <text>十三、</text>
+  </view>
+
+  <view class="body">
+    <text>如需计算陈宫宝具二段回收的情况，可自行在高级设置中修改宝具hit数和宝具hit分布</text>
+  </view>
+
+  <view class="title">
+    <text>十四、</text>
+  </view>
+
+  <view class="body">
+    <text>关于部分特殊情况下职介相性及克制的说明：</text>
+    <text>杀生院对ruler的1.5倍克制已录入数据库。小安礼装及人科从者对beastⅤ杀狐的克制未录入数据库，暂时无法计算</text>
+  </view>
+
+
+</view>

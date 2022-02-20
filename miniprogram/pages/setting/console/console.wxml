@@ -1,0 +1,214 @@
+<view class="root">
+
+
+  <view class="head">
+    <text>-----更新日志-----</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.0.0</text>
+  </view>
+
+  <view class="body">
+    <text>2020/1/31</text>
+    <text>1.上线伤害计算器功能</text>
+    <text>2.上线击破概率模拟功能</text>
+    <text>3.上线周回宝具计算功能</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.0.1</text>
+  </view>
+
+  <view class="body">
+    <text>2020/2/1</text>
+    <text>1.完善从者搜索功能</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.0.2</text>
+  </view>
+
+  <view class="body">
+    <text>2020/2/14</text>
+    <text>1.界面修改</text>
+    <text>2.模拟次数下调</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.0.3</text>
+  </view>
+
+  <view class="body">
+    <text>2020/2/26</text>
+    <text>1.全攻击耐性错误bug修复</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.1.0</text>
+  </view>
+
+  <view class="body">
+    <text>2020/3/1</text>
+    <text>1.上线发牌概率计算功能</text>
+    <text>2.部分机型适配问题</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.1.1</text>
+  </view>
+
+  <view class="body">
+    <text>2020/3/8</text>
+    <text>1.增加两人发牌概率</text>
+    <text>2.击破概率模拟算法改进</text>
+    <text>3.伤害计算器增加详细信息页面，增加宝具颜色和ex指令卡自动选取</text>
+    <text>4.修改累积伤害计算方式</text>
+    <text>5.部分界面及图标微调</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.1.2</text>
+  </view>
+
+  <view class="body">
+    <text>2020/3/14</text>
+    <text>1.修改击破概率模拟</text>
+    <text>2.行动三附加buff的固定伤害bug修复</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.1.3</text>
+  </view>
+
+  <view class="body">
+    <text>2020/3/26</text>
+    <text>1.上线增删敌人功能</text>
+    <text>2.增加随机数设置功能</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.1.4</text>
+  </view>
+
+  <view class="body">
+    <text>2020/3/31</text>
+    <text>1.修改buster chain情况下ex卡的固定伤害</text>
+    <text>2.修改伤害取整方式(round->floor)</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.1.5</text>
+  </view>
+
+  <view class="body">
+    <text>2020/4/2</text>
+    <text>1.修改np的rounddown函数</text>
+    <text>2.buff清零增加绿暴清零</text>
+    <text>3.修改部分输入框输入模式</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.1.6</text>
+  </view>
+
+  <view class="body">
+    <text>2020/4/11</text>
+    <text>1.调整np的rounddown函数</text>
+    <text>2.修改部分输入框输入模式</text>
+    <text>3.调整首页轮播图大小</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.2.0</text>
+  </view>
+
+  <view class="body">
+    <text>2020/5/19</text>
+    <text>1.新增保存计算信息功能</text>
+    <text>2.增加ex指令卡的c类附加buff栏</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.2.1</text>
+  </view>
+
+  <view class="body">
+    <text>2020/6/5</text>
+    <text>1.修复部分机型np求和的精度问题</text>
+  </view>
+
+
+  <view class="title">
+    <text>版本1.3.0</text>
+  </view>
+
+  <view class="body">
+    <text>2020/8/8</text>
+    <text>1.上线暴击概率功能</text>
+    <text>2.主页页面修改</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.3.1</text>
+  </view>
+
+  <view class="body">
+    <text>2020/8/14</text>
+    <text>1.增加单卡np计算功能</text>
+  </view>
+
+
+    <view class="title">
+    <text>版本1.3.2</text>
+  </view>
+
+  <view class="body">
+    <text>2020/8/16</text>
+    <text>1.修改主页图标</text>
+    <text>2.增加保存功能弹窗</text>
+    <text>3.修改部分功能的说明</text>
+  </view>
+
+
+      <view class="title">
+    <text>版本1.3.3</text>
+  </view>
+
+  <view class="body">
+    <text>2020/8/18</text>
+    <text>1.修改伤害计算器页面头像显示</text>
+    <text>2.计算信息清除页面增加已保存信息的从者列表</text>
+    <text>3.修改部分功能的说明</text>
+    <text>4.增加首页轮播图跳转至使用说明</text>
+    <text>5.修改np计算变量数据类型，修改np计算精度问题</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.4.0</text>
+  </view>
+
+  <view class="body">
+    <text>2021/7/6</text>
+    <text>1.新增敌方宝具耐性和暴击耐性</text>
+    <text>2.修改暴击星获取下限低于0的错误</text>
+    <text>3.新增从者等级选择和宝具等级选择</text>
+    <text>4.从者被动技能(职介技能)录入</text>
+    <text>5.新增队友指令卡选择</text>
+    <text>6.新增小数点输入功能</text>
+    <text>7.修改计算页面从者头像无法显示问题</text>
+    <text>8.关闭周回宝具计算功能</text>
+    <text>9.新增版本更新说明</text>
+  </view>
+
+  <view class="title">
+    <text>版本1.4.1</text>
+  </view>
+
+  <view class="body">
+    <text>2021/8/11</text>
+    <text>1.新增职阶Pretender</text>
+  </view>
+
+
+</view>

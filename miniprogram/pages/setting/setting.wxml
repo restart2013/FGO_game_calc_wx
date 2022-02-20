@@ -1,0 +1,40 @@
+<view class="root">
+
+  <navigator url="info/info" hover-class="none">
+    <view class="part one">
+      <text>使用说明</text>
+    </view>
+  </navigator>
+
+  <navigator url="question/question" hover-class="none">
+    <view class="part two">
+      <text>常见问题</text>
+    </view>
+  </navigator>
+
+  <navigator url="console/console" hover-class="none">
+    <view class="part two">
+      <text>更新日志</text>
+    </view>
+  </navigator>
+
+  <navigator url="clacclear/clacclear" hover-class="none">
+    <view class="part one">
+      <text>计算信息清除</text>
+    </view>
+  </navigator>
+
+  <navigator url="clacclear/clacclear" hover-class="none" hidden="1">
+    <view class="part two">
+      <text>提示设置</text>
+    </view>
+  </navigator>
+
+  <navigator url="writer/writer" hover-class="none">
+    <view class="part one">
+      <text>关于作者</text>
+    </view>
+  </navigator>
+
+
+</view>

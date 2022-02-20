@@ -1,0 +1,277 @@
+<view class="root">
+  <view class="head">
+    <image src="../../images/pc/border.png"></image>
+  </view>
+  <view class="title">
+    <text>发牌概率计算</text>
+  </view>
+
+
+  <view class="nav">
+    <view class="imgbtn" bindtap="scrollone">
+      <image src="../../images/pc/nav1.png"></image>
+    </view>
+    <view class="imgbtn" bindtap="scrolltwo">
+      <image src="../../images/pc/nav2.png"></image>
+    </view>
+    <view class="imgbtn" bindtap="scrollthree">
+      <image src="../../images/pc/nav3.png"></image>
+    </view>
+    <view class="imgbtn" bindtap="scrollfour">
+      <image src="../../images/pc/nav4.png"></image>
+    </view>
+    <view class="imgbtn"></view>
+  </view>
+
+
+  <view class="part" hidden="{{partone[index]}}">
+    <view class="tips">
+      <text>单回合发牌</text>
+    </view>
+
+    <view class="cardgroup">
+      <text>从者配卡</text>
+      <picker class="picker" range="{{ group }}" value="{{ fgroup }}" bindchange="fgroupset">
+        <view>{{ group[fgroup] }}</view>
+      </picker>
+    </view>
+
+    <view class="tips">
+      <text>发牌要求</text>
+    </view>
+
+    <view class="line" wx:for="{{ fnumber }}">
+      <view class="item">
+        <picker class="pickerfather" range="{{ color }}" value="{{ item.card }}" bindchange="fchange{{item.id}}">
+          <view class="picker">{{ color[item.card] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <checkbox checked="{{ item.wz }}" bindtap="fwzset{{item.id}}">纹章</checkbox>
+      </view>
+      <view class="item"></view>
+    </view>
+
+    <button class="clac" bindtap="fclac">发牌概率</button>
+
+    <view class="line">
+      <view class="item">
+        <text>发牌概率(仅含)</text>
+        <text class="res">{{ fponly }}</text>
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="item">
+        <text>发牌概率(包含)</text>
+        <text class="res">{{ fp }}</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+  <view class="part" hidden="{{parttwo[index]}}">
+    <view class="tips">
+      <text>两回合共享发牌</text>
+    </view>
+
+    <view class="cardgroup">
+      <text>从者配卡</text>
+      <picker class="picker" range="{{ group }}" value="{{ sgroup }}" bindchange="sgroupset">
+        <view>{{ group[sgroup] }}</view>
+      </picker>
+    </view>
+
+    <view class="tips">
+      <text>发牌要求</text>
+    </view>
+
+    <view class="tips">
+      <text>回合一</text>
+    </view>
+
+    <view class="line" wx:for="{{ snumberto }}">
+      <view class="item">
+        <picker class="pickerfather" range="{{ color }}" value="{{ item.card }}" bindchange="schange{{item.id}}">
+          <view class="picker">{{ color[item.card] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <checkbox checked="{{ item.wz }}" bindtap="swzset{{item.id}}">纹章</checkbox>
+      </view>
+      <view class="item"></view>
+    </view>
+
+    <view class="tips">
+      <text>回合二</text>
+    </view>
+
+    <view class="line" wx:for="{{ snumbertt }}">
+      <view class="item">
+        <picker class="pickerfather" range="{{ color }}" value="{{ item.card }}" bindchange="schange{{item.id}}">
+          <view class="picker">{{ color[item.card] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <checkbox checked="{{ item.wz }}" bindtap="swzset{{item.id}}">纹章</checkbox>
+      </view>
+      <view class="item"></view>
+    </view>
+
+    <button class="clac" bindtap="sclac">发牌概率</button>
+
+    <view class="line">
+      <view class="item">
+        <text>发牌概率</text>
+        <text class="res">{{ sp }}</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+  <view class="part" hidden="{{partthree[index]}}">
+    <view class="tips">
+      <text>三回合共享发牌</text>
+    </view>
+
+    <view class="cardgroup">
+      <text>从者配卡</text>
+      <picker class="picker" range="{{ group }}" value="{{ tgroup }}" bindchange="tgroupset">
+        <view>{{ group[tgroup] }}</view>
+      </picker>
+    </view>
+
+    <view class="tips">
+      <text>发牌要求</text>
+    </view>
+
+    <view class="tips">
+      <text>回合一</text>
+    </view>
+
+    <view class="line" wx:for="{{ tnumberto }}">
+      <view class="item">
+        <picker class="pickerfather" range="{{ color }}" value="{{ item.card }}" bindchange="tchange{{item.id}}">
+          <view class="picker">{{ color[item.card] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <checkbox checked="{{ item.wz }}" bindtap="twzset{{item.id}}">纹章</checkbox>
+      </view>
+      <view class="item"></view>
+    </view>
+
+    <view class="tips">
+      <text>回合二</text>
+    </view>
+
+    <view class="line" wx:for="{{ tnumbertt }}">
+      <view class="item">
+        <picker class="pickerfather" range="{{ color }}" value="{{ item.card }}" bindchange="tchange{{item.id}}">
+          <view class="picker">{{ color[item.card] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <checkbox checked="{{ item.wz }}" bindtap="twzset{{item.id}}">纹章</checkbox>
+      </view>
+      <view class="item"></view>
+    </view>
+
+    <view class="tips">
+      <text>回合三</text>
+    </view>
+
+    <view class="line" wx:for="{{ tnumberte }}">
+      <view class="item">
+        <picker class="pickerfather" range="{{ color }}" value="{{ item.card }}" bindchange="tchange{{item.id}}">
+          <view class="picker">{{ color[item.card] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <checkbox checked="{{ item.wz }}" bindtap="twzset{{item.id}}">纹章</checkbox>
+      </view>
+      <view class="item"></view>
+    </view>
+
+    <button class="clac" bindtap="tclac">发牌概率</button>
+
+    <view class="line">
+      <view class="item">
+        <text>发牌概率</text>
+        <text class="res">{{ tp }}</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+  <view class="part" hidden="{{partfour[index]}}">
+    <view class="tips">
+      <text>场上人数两人</text>
+    </view>
+
+    <view class="cardgroup">
+      <text>从者配卡</text>
+      <picker class="picker" range="{{ group }}" value="{{ mgroup }}" bindchange="mgroupset">
+        <view>{{ group[mgroup] }}</view>
+      </picker>
+    </view>
+
+    <view class="tips">
+      <text>发牌要求</text>
+    </view>
+    <view class="tips">
+      <text>回合一</text>
+    </view>
+
+    <view class="line" wx:for="{{ mnumber }}">
+      <view class="item">
+        <picker class="pickerfather" range="{{ color }}" value="{{ item.card }}" bindchange="mchange{{item.id}}">
+          <view class="picker">{{ color[item.card] }}</view>
+        </picker>
+      </view>
+      <view class="item">
+        <checkbox checked="{{ item.wz }}" bindtap="mwzset{{item.id}}">纹章</checkbox>
+      </view>
+      <view class="item"></view>
+    </view>
+
+    <button class="clac" bindtap="mclac">发牌概率</button>
+
+    <view class="line">
+      <view class="item">
+        <text>发牌概率(仅含)</text>
+        <text class="res">{{ mponly }}</text>
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="item">
+        <text>发牌概率(包含)</text>
+        <text class="res">{{ mp }}</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+
+  <view class="part">
+    <view hidden="{{ smhide }}">
+      <text class="wxts">tips：三回合共享发牌也可用于计算两回合共享和单回合发牌，同理两回合共享可用于计算单回合发牌，为方便大家操作，这里将它们区分开了。需要注意多回合共享发牌的概率计算结果为包含该发牌的概率，而非只发到该种牌的概率。</text>
+      <text class="wxts">举例：两回合共享发牌，从者配卡BBAAQ，回合一选择QA，回合二选择B；则回合一发到QAB,回合二发到B或者回合一发到QA，回合二发到BB等这类情况也计算在内。</text>
+      <text class="wxts">温馨提示：关于纹章的勾选，并非卡上有纹章就勾选。而是当发牌需要这张带纹章的卡时再勾选。</text>
+      <text class="wxts">举例：从者配卡BBBAQ，其中一张B卡有梅林纹章，其余两张B卡也分别有其他纹章。当发牌要求仅为两张B卡时，不勾选纹章。发牌要求为一张B卡，一张带梅林纹章B卡，则勾选一张。</text>
+      <text class="wxts">说明：选择指令卡时，指令卡的顺序、位置均不影响概率计算。</text>
+    </view>
+    <button class="btn" bindtap="smhideset">说明</button>
+  </view>
+
+
+</view>
